@@ -12,6 +12,7 @@ Url:		https://github.com/rockdaboot/libpsl
 Source0:	https://github.com/rockdaboot/libpsl/releases/download/libpsl-%{version}/libpsl-%{version}.tar.gz
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	libidn2-devel
+BuildRequires:	libunistring-devel
 BuildRequires:  publicsuffix-list
 # for man-pages
 BuildRequires:	xsltproc
