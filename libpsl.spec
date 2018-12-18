@@ -110,7 +110,7 @@ This package contains the developmen files and headers for %{name}.
 # curl (as of 7.56.0) now depends on libidn2, and is a core package.
 # wget still uses libidn 1.x, but it is not a core package.  Therefore, use
 # libidn2 at runtime to help minimize core dependencies.
-%configure2_5x \
+%configure \
 	--disable-static \
 	--enable-man \
 	--disable-gtk-doc \
