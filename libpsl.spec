@@ -10,8 +10,8 @@ License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
 Source0:	https://github.com/rockdaboot/libpsl/releases/download/libpsl-%{version}/libpsl-%{version}.tar.gz
-BuildRequires:	libicu-devel
-BuildRequires:	libidn2-devel
+BuildRequires:	pkgconfig(icu-i18n)
+BuildRequires:	pkgconfig(libidn2)
 BuildRequires:  publicsuffix-list
 # for man-pages
 BuildRequires:	xsltproc
