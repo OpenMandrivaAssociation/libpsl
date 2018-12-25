@@ -62,7 +62,8 @@ from a plain text Public Suffix List.
 %package -n %{libname}
 Summary:	Shared libraries for %{name}
 Group:		System/Libraries
-Requires:	publicsuffix-list-dafsa
+#Tempoary...
+#Requires:	publicsuffix-list-dafsa
 
 %description -n %{libname}
 A "public suffix" is a domain name under which Internet users can directly
