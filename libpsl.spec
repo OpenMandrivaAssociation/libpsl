@@ -10,6 +10,8 @@ License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
 Source0:	https://github.com/rockdaboot/libpsl/releases/download/libpsl-%{version}/libpsl-%{version}.tar.gz
+BuildRequires:	pkgconfig(icu-uc)
+BuildRequires:	libunistring-devel
 BuildRequires:	pkgconfig(icu-i18n)
 BuildRequires:	pkgconfig(libidn2)
 BuildRequires:  publicsuffix-list
@@ -61,7 +63,8 @@ from a plain text Public Suffix List.
 %package -n %{libname}
 Summary:	Shared libraries for %{name}
 Group:		System/Libraries
-Requires:	publicsuffix-list-dafsa
+#Tempoary...
+#Requires:	publicsuffix-list-dafsa
 
 %description -n %{libname}
 A "public suffix" is a domain name under which Internet users can directly
