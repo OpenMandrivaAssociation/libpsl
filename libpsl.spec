@@ -11,8 +11,9 @@ Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
 Source0:	https://github.com/rockdaboot/libpsl/releases/download/libpsl-%{version}/libpsl-%{version}.tar.gz
 BuildRequires:	pkgconfig(icu-uc)
-BuildRequires:	libidn2-devel
 BuildRequires:	libunistring-devel
+BuildRequires:	pkgconfig(icu-i18n)
+BuildRequires:	pkgconfig(libidn2)
 BuildRequires:  publicsuffix-list
 # for man-pages
 BuildRequires:	xsltproc
@@ -112,7 +113,7 @@ This package contains the developmen files and headers for %{name}.
 # curl (as of 7.56.0) now depends on libidn2, and is a core package.
 # wget still uses libidn 1.x, but it is not a core package.  Therefore, use
 # libidn2 at runtime to help minimize core dependencies.
-%configure2_5x \
+%configure \
 	--disable-static \
 	--enable-man \
 	--disable-gtk-doc \
