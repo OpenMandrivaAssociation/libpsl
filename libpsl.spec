@@ -5,7 +5,7 @@
 Name:		libpsl
 Summary:	C library for the Public Suffix List
 Version:	0.20.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
@@ -63,8 +63,7 @@ from a plain text Public Suffix List.
 %package -n %{libname}
 Summary:	Shared libraries for %{name}
 Group:		System/Libraries
-#Tempoary...
-#Requires:	publicsuffix-list-dafsa
+Requires:	publicsuffix-list-dafsa
 
 %description -n %{libname}
 A "public suffix" is a domain name under which Internet users can directly
