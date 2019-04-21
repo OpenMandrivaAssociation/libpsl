@@ -4,8 +4,8 @@
 
 Name:		libpsl
 Summary:	C library for the Public Suffix List
-Version:	0.20.2
-Release:	4
+Version:	0.21.0
+Release:	1
 License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
