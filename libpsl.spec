@@ -1,10 +1,10 @@
-%define major	5
-%define libname	%mklibname psl %{major}
+%define major 5
+%define libname %mklibname psl %{major}
 %define devname %mklibname psl -d
 
 Name:		libpsl
 Summary:	C library for the Public Suffix List
-Version:	0.21.0
+Version:	0.21.1
 Release:	1
 License:	MIT
 Group:		System/Libraries
@@ -14,7 +14,7 @@ BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	libunistring-devel
 BuildRequires:	pkgconfig(icu-i18n)
 BuildRequires:	pkgconfig(libidn2)
-BuildRequires:  publicsuffix-list
+BuildRequires:	publicsuffix-list
 # for man-pages
 BuildRequires:	xsltproc
 
