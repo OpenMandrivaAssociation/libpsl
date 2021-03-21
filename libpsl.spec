@@ -11,7 +11,7 @@ Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
 Source0:	https://github.com/rockdaboot/libpsl/releases/download/libpsl-%{version}/libpsl-%{version}.tar.gz
 BuildRequires:	pkgconfig(icu-uc)
-BuildRequires:	libunistring-devel
+BuildRequires:	pkgconfig(libunistring)
 BuildRequires:	pkgconfig(icu-i18n)
 BuildRequires:	pkgconfig(libidn2)
 BuildRequires:	publicsuffix-list
