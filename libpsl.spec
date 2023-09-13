@@ -1,11 +1,12 @@
 %define major 5
-%define libname %mklibname psl %{major}
+%define oldlibname %mklibname psl 5
+%define libname %mklibname psl
 %define devname %mklibname psl -d
 
 Name:		libpsl
 Summary:	C library for the Public Suffix List
 Version:	0.21.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
@@ -65,6 +66,7 @@ from a plain text Public Suffix List.
 Summary:	Shared libraries for %{name}
 Group:		System/Libraries
 Requires:	publicsuffix-list-dafsa
+%rename %{oldlibname}
 
 %description -n %{libname}
 A "public suffix" is a domain name under which Internet users can directly
@@ -134,11 +136,10 @@ install -m0755 src/psl-make-dafsa %{buildroot}%{_bindir}/
 # fix shebang
 sed -i -e "1s|#!.*|#!%{__python3}|" %{buildroot}%{_bindir}/psl-make-dafsa
 
-#we don't want these
-find %{buildroot} -name "*.la" -delete
-
+%if ! %{cross_compiling}
 %check
 make check || cat tests/test-suite.log
+%endif
 
 %files -n psl
 %{_bindir}/psl
