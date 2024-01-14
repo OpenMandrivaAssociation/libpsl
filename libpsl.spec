@@ -5,12 +5,12 @@
 
 Name:		libpsl
 Summary:	C library for the Public Suffix List
-Version:	0.21.2
-Release:	2
+Version:	0.21.5
+Release:	1
 License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
-Source0:	https://github.com/rockdaboot/libpsl/releases/download/libpsl-%{version}/libpsl-%{version}.tar.lz
+Source0:	https://github.com/rockdaboot/libpsl/releases/download/%{version}/libpsl-%{version}.tar.lz
 BuildRequires:	lzip
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(libunistring)
