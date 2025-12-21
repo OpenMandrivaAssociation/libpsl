@@ -11,6 +11,11 @@ License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
 Source0:	https://github.com/rockdaboot/libpsl/releases/download/%{version}/libpsl-%{version}.tar.lz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	lzip
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(libunistring)
