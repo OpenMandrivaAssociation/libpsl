@@ -6,7 +6,7 @@
 Name:		libpsl
 Summary:	C library for the Public Suffix List
 Version:	0.23.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		System/Libraries
 Url:		https://github.com/rockdaboot/libpsl
@@ -120,12 +120,18 @@ This package contains the developmen files and headers for %{name}.
 # curl (as of 7.56.0) now depends on libidn2, and is a core package.
 # wget still uses libidn 1.x, but it is not a core package.  Therefore, use
 # libidn2 at runtime to help minimize core dependencies.
+%if %{cross_compiling}
+export PKG_CONFIG_SYSROOT_DIR=/usr/%{_target_platform}
+%endif
 %configure \
 	--disable-static \
 	--enable-man \
 	--disable-gtk-doc \
 	--enable-builtin=libicu \
 	--enable-runtime=libidn2 \
+%if %{cross_compiling}
+	--with-libunistring-prefix=/usr/%{_target_platform} \
+%endif
 	--with-psl-distfile=%{_datadir}/publicsuffix/public_suffix_list.dafsa  \
 	--with-psl-file=%{_datadir}/publicsuffix/effective_tld_names.dat       \
 	--with-psl-testfile=%{_datadir}/publicsuffix/test_psl.txt
